@@ -1,0 +1,32 @@
+body { 
+	overflow: auto;
+}
+#sidebar { 
+	float: left;
+	width: 150px;
+	background-color: #ccc;
+}
+
+.resources{
+	width: 64px;
+	height: 64px;
+
+}
+.color{
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+.saves {
+	width: 200px;
+	height: 150px;
+	border: 1px solid #000000;
+}
+
+#canvas {
+	border: 1px solid #000000;	
+}
+button {
+	margin-top: 10px;	
+}

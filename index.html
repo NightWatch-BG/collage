@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/fabric.js"></script>
+	<script src="js/collage.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+</head>
+<body>
+	<div id="saves"></div>
+	<div style="float:left;">
+		<canvas id="canvas" width="800" height="600"></canvas>
+		<script>
+			var canvas = new fabric.Canvas("canvas");
+
+		</script>
+		<button type="button" onclick="saveImage(canvas)">Save</button>
+	</div>
+	<div style="float:left; margin:5px">
+	<div id="sidebar">
+		<p>Pick element</p>
+		<img src="resources/html5.png" alt="html5" class="resources" onclick="addToCollage(this, canvas)">
+		<img src="resources/css3.png" alt="css3" class="resources" onclick="addToCollage(this, canvas)">
+		<img src="resources/js.png" alt="js" class="resources" onclick="addToCollage(this, canvas)">
+		<img src="resources/jquery.png" alt="jquery" class="resources" onclick="addToCollage(this, canvas)">
+		<img src="resources/github.png" alt="hithub" class="resources" onclick="addToCollage(this, canvas)">
+		<img src="resources/nodejs.jpg" alt="notejs" class="resources" onclick="addToCollage(this, canvas)">
+	</div>
+	<div id="colors" style="clear:both">
+		<p>Pick background color</p>
+		<div id="black" class="color" style="background-color:black" onclick="setBackground(this, canvas)"></div>
+		<div id="white" class="color" style="background-color:white" onclick="setBackground(this, canvas)"></div>
+		<div id="blue" class="color" style="background-color:blue" onclick="setBackground(this, canvas)"></div>
+		<div id="green" class="color" style="background-color:green" onclick="setBackground(this, canvas)"></div>
+		<div id="yellow " class="color" style="background-color:yellow" onclick="setBackground(this, canvas)"></div>
+		<div id="orange " class="color" style="background-color:orange" onclick="setBackground(this, canvas)"></div>
+		<div id="red" class="color" style="background-color:red" onclick="setBackground(this, canvas)"></div>	
+	</div>
+	<div style="clear:both">
+		<p>Add shape (default color - black)</p>
+		<select id="fillColor">
+			<option value="">Shape color:</option>
+			<option value="black">black</option>
+			<option value="white">white</option>
+			<option value="blue">blue</option>
+			<option value="green">green</option>
+			<option value="yellow">yellow</option>
+			<option value="orange">orange</option>
+			<option value="red">red</option>
+		</select>
+		<button id="circle" type="button" onclick="addShape(this, canvas)">Add Circle</button>
+		<button id="rectangle" type="button" onclick="addShape(this, canvas)">Add Rectangle</button>
+		<button id="triangle" type="button" onclick="addShape(this, canvas)">Add Triangle</button>
+	</div>
+	<div>
+		<p>Add text</p>
+		<input type="text" id="msg">
+		<button id="msgBtn" type="button" onclick="addText(canvas)">Add text</button>
+	</div>
+	</div>
+</body>
+</html>
